@@ -1,0 +1,28 @@
+(executables
+  (names
+     server
+     client
+     pub
+     sub
+     encrypted_server
+     encrypted_client
+     auth_encrypted_server
+     curve_keygen
+  )
+  (libraries zmq-lwt bos)
+  (preprocess (pps lwt_ppx))
+)
+
+(alias
+  (name all)
+  (deps
+    server.exe
+    client.exe
+    pub.exe
+    sub.exe
+    encrypted_server.exe
+    encrypted_client.exe
+    auth_encrypted_server.exe
+    curve_keygen.exe
+  )
+)
