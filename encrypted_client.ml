@@ -19,7 +19,7 @@ let main () =
       read_key_in_file server_public_key_path
     | _ ->
       Printf.printf "usage: %s <client-public-key> <client-private-key> <server-public-key>\n%!"
-        Sys.argv.(1);
+        Sys.argv.(0);
       exit 1
   in
 

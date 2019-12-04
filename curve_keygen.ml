@@ -12,7 +12,7 @@ let main () =
     match Sys.argv with
     | [| _ ; output_prefix |] -> output_prefix
     | _ ->
-      Printf.printf "usage: %s <output-prefix>\n%!" Sys.argv.(1);
+      Printf.printf "usage: %s <output-prefix>\n%!" Sys.argv.(0);
       exit 1
   in
   let public_key, private_key = Zmq.Curve.keypair () in
